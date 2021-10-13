@@ -3,6 +3,7 @@
 project.lock.json
 .DS_Store
 *.pyc
+*.ps1
 
 # Visual Studio Code
 .vscode
@@ -39,5 +40,6 @@ msbuild.wrn
 *.o
 *.so
 
-# Terraform
+# Terraform, using the tfstate we added to the backend.
 .terraform
+*.ftstate*
