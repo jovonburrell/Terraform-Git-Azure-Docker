@@ -33,7 +33,7 @@ stages:
   dependsOn: Build
   jobs:
   - job: Provision
-    displayName: 'Provisioning COntainer Instance'
+    displayName: 'Provisioning Container Instance'
     pool:
       vmImage: 'ubuntu-latest'
     variables:
@@ -47,7 +47,7 @@ stages:
       name: 'RunTerraform'
       displayName: 'Run Terraform'
       env: 
-        ARM_CLIENT_ID: $(ARM_CLIENT_ID) 
-        ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET) 
-        ARM_TENANT_ID: $(ARM_TENANT_ID) 
+        ARM_CLIENT_ID: $(ARM_CLIENT_ID)
+        ARM_CLIENT_SECRET: $(ARM_CLIENT_SECRET)
+        ARM_TENANT_ID: $(ARM_TENANT_ID)
         ARM_SUBSCRIPTION_ID: $(ARM_SUBSCRIPTION_ID)
