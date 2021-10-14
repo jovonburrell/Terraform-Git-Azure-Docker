@@ -10,6 +10,11 @@ terraform {
     key = "terraform.tfstate"
   }
 }
+
+variable "imagebuild"{
+  type = string
+  description = "Latest image build"
+} 
 resource "azurerm_resource_group" "ft_lab" {
 name = "weather-rg"
 location = "southcentralus" 
@@ -26,7 +31,7 @@ os_type = "Linux"
 
 container {
   name = "weatherapi"
-  image = "redstripe555/weatherapi"
+  image = "redstripe555/weatherapi:${var.imagebuild}"
   cpu = "1"
   memory = "1"
 
